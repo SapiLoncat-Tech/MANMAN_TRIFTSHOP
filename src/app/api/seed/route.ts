@@ -35,8 +35,7 @@ export async function GET() {
       title: p.title,
       price: p.price,
       condition: p.condition,
-      image: p.image,
-      description: p.description || 'Barang preloved berkualitas'
+      image: p.image
     }));
 
     const { error: prodError } = await supabaseAdmin
