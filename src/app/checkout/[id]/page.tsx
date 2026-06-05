@@ -144,7 +144,7 @@ export default function CheckoutPage({ params }: { params: Promise<{ id: string 
                     {paymentMethod === 'escrow' && (
                       <div className="mt-4 p-4 bg-white dark:bg-muted border rounded-md" onClick={(e) => e.stopPropagation()}>
                         <label className="block text-sm font-medium mb-2">Pilih Bank Tujuan Transfer:</label>
-                        <Select value={selectedBank} onValueChange={setSelectedBank}>
+                        <Select value={selectedBank} onValueChange={(val) => setSelectedBank(val || '')}>
                           <SelectTrigger className="w-full">
                             <SelectValue placeholder="Pilih Bank Syariah..." />
                           </SelectTrigger>
