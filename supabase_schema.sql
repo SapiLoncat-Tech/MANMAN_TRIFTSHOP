@@ -20,8 +20,9 @@ CREATE TABLE IF NOT EXISTS products (
   title TEXT NOT NULL,
   price BIGINT NOT NULL,
   condition INTEGER NOT NULL CHECK (condition >= 1 AND condition <= 10),
-  image TEXT NOT NULL,
+  images TEXT[] NOT NULL,
   description TEXT,
+  defect_description TEXT,
   seller_id UUID, -- Akan disambung ke tabel auth pengguna nantinya
   created_at TIMESTAMP WITH TIME ZONE DEFAULT timezone('utc'::text, now()) NOT NULL
 );
@@ -51,6 +52,6 @@ VALUES ('pakaian-pria', 'Pakaian Pria', '👔', 'Pakaian pria preloved berkualit
 ON CONFLICT (id) DO NOTHING;
 
 -- (Opsional) Masukkan 1 Data Produk Dummy untuk Tes
-INSERT INTO products (slug, title, price, condition, image, description)
-VALUES ('pakaian-pria', 'Jaket Denim Vintage (Tes Database)', 150000, 8, 'https://images.unsplash.com/photo-1576871337622-98d48d1cf531?auto=format&fit=crop&q=80&w=400', 'Jaket keren dari Supabase')
+INSERT INTO products (slug, title, price, condition, images, description, defect_description)
+VALUES ('pakaian-pria', 'Jaket Denim Vintage (Tes Database)', 150000, 8, ARRAY['https://images.unsplash.com/photo-1576871337622-98d48d1cf531?auto=format&fit=crop&q=80&w=400'], 'Jaket keren dari Supabase', 'Tidak ada cacat')
 ON CONFLICT DO NOTHING;
