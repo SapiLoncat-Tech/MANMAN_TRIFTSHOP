@@ -3,7 +3,7 @@
 import { useState, use } from 'react';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { ShieldCheck, Truck, CreditCard, AlertCircle, Building2, ChevronDown } from 'lucide-react';
+import { ShieldCheck, Truck, CreditCard, AlertCircle, Building2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
