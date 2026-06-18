@@ -152,7 +152,7 @@ export default function Home() {
               <h2 className="text-3xl font-bold tracking-tight mb-2">Baru Diverifikasi AI</h2>
               <p className="text-muted-foreground">Produk preloved yang baru lolos uji kewajaran harga dan deskripsi.</p>
             </div>
-            <Button variant="ghost" className="hidden sm:flex gap-2">
+            <Button variant="outline" className="hidden sm:flex gap-2 border-primary text-primary hover:bg-primary/10">
               Lihat Semua <ArrowRight className="w-4 h-4" />
             </Button>
           </div>
@@ -168,7 +168,7 @@ export default function Home() {
                   </div>
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img 
-                    src={product.image} 
+                    src={product.images?.[0] || product.image} 
                     alt={product.title}
                     className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500"
                   />
