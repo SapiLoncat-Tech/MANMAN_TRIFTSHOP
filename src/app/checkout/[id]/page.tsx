@@ -102,7 +102,7 @@ export default function CheckoutPage({ params }: { params: Promise<{ id: string 
               <div className="flex items-center gap-4 p-4 border rounded-lg bg-muted/20">
                 <div className="w-20 h-20 bg-muted rounded-md overflow-hidden shrink-0">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={(product as any).images?.[0] || product.image} alt={product.title} className="w-full h-full object-cover" />
+                  <img src={product.image} alt={product.title} className="w-full h-full object-cover" />
                 </div>
                 <div className="flex-1">
                   <h3 className="font-semibold">{product.title}</h3>
