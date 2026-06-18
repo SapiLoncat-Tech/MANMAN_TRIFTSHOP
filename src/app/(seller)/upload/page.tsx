@@ -151,7 +151,7 @@ export default function UploadProductPage() {
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-2">
                   <Label htmlFor="category">Kategori</Label>
-                  <Select onValueChange={(val: string) => setFormData({...formData, category: val})}>
+                  <Select onValueChange={(val: any) => setFormData({...formData, category: val})}>
                     <SelectTrigger>
                       <SelectValue placeholder="Pilih Kategori" />
                     </SelectTrigger>
