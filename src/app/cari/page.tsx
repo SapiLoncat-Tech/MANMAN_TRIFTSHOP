@@ -45,7 +45,7 @@ export default async function SearchResultsPage({
                 </div>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img 
-                  src={product.images?.[0] || product.image} 
+                  src={(product as any).images?.[0] || product.image} 
                   alt={product.title}
                   className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500"
                 />

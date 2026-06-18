@@ -60,7 +60,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ id: st
             </div>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img 
-              src={product.images?.[0] || product.image} 
+              src={(product as any).images?.[0] || product.image} 
               alt={product.title} 
               className="w-full h-full object-cover"
             />
