@@ -67,7 +67,7 @@ export default function CategoryDetailPage({ params }: { params: Promise<{ slug:
                 </div>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img 
-                  src={product.image} 
+                  src={product.images?.[0] || product.image} 
                   alt={product.title}
                   className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500"
                 />
