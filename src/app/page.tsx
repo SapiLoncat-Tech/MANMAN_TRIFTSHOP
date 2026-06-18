@@ -152,8 +152,10 @@ export default function Home() {
               <h2 className="text-3xl font-bold tracking-tight mb-2">Baru Diverifikasi AI</h2>
               <p className="text-muted-foreground">Produk preloved yang baru lolos uji kewajaran harga dan deskripsi.</p>
             </div>
-            <Button variant="outline" className="hidden sm:flex gap-2 border-primary text-primary hover:bg-primary/10">
-              Lihat Semua <ArrowRight className="w-4 h-4" />
+            <Button variant="outline" className="hidden sm:flex gap-2 border-primary text-primary hover:bg-primary/10" asChild>
+              <Link href="/kategori">
+                Lihat Semua <ArrowRight className="w-4 h-4" />
+              </Link>
             </Button>
           </div>
           
@@ -196,8 +198,10 @@ export default function Home() {
           </div>
           
           <div className="mt-8 flex justify-center sm:hidden">
-            <Button variant="outline" className="w-full gap-2">
-              Lihat Semua <ArrowRight className="w-4 h-4" />
+            <Button variant="outline" className="w-full gap-2 border-primary text-primary" asChild>
+              <Link href="/kategori">
+                Lihat Semua <ArrowRight className="w-4 h-4" />
+              </Link>
             </Button>
           </div>
         </div>
