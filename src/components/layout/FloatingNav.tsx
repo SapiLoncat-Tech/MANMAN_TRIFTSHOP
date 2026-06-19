@@ -38,15 +38,8 @@ export function FloatingNav() {
       </Button>
 
       <DropdownMenu>
-        <DropdownMenuTrigger asChild>
-          <Button 
-            variant="ghost" 
-            size="icon" 
-            className="rounded-full hover:bg-primary/10 hover:text-primary"
-            title="Menu Lainnya"
-          >
-            <MoreVertical className="w-5 h-5" />
-          </Button>
+        <DropdownMenuTrigger className="inline-flex shrink-0 items-center justify-center w-8 h-8 rounded-full hover:bg-primary/10 hover:text-primary outline-none transition-all cursor-pointer" title="Menu Lainnya">
+          <MoreVertical className="w-5 h-5" />
         </DropdownMenuTrigger>
         <DropdownMenuContent align="end" className="w-56">
           <DropdownMenuLabel>Menu Aplikasi</DropdownMenuLabel>
