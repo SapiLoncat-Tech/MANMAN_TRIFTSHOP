@@ -220,27 +220,27 @@ export default function Home() {
             Sistem kami dirancang untuk mengimplementasikan QS. Al-Baqarah ayat 282 tentang pencatatan utang-piutang digital yang transparan dan aman.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto mt-16">
-            <div className="flex flex-col items-center gap-4">
-              <div className="w-16 h-16 rounded-2xl bg-white/10 flex items-center justify-center backdrop-blur-md">
-                <ShieldCheck className="w-8 h-8" />
+            <Link href="/syariah" className="flex flex-col items-center gap-4 group cursor-pointer hover:-translate-y-2 transition-all duration-300">
+              <div className="w-16 h-16 rounded-2xl bg-white/10 flex items-center justify-center backdrop-blur-md group-hover:bg-white/20 transition-colors">
+                <ShieldCheck className="w-8 h-8 group-hover:scale-110 transition-transform" />
               </div>
-              <h3 className="font-semibold text-xl">Sistem Escrow</h3>
+              <h3 className="font-semibold text-xl group-hover:text-white transition-colors">Sistem Escrow</h3>
               <p className="text-primary-foreground/70 text-sm">Dana Anda ditahan aman di rekening bersama hingga barang diterima.</p>
-            </div>
-            <div className="flex flex-col items-center gap-4">
-              <div className="w-16 h-16 rounded-2xl bg-white/10 flex items-center justify-center backdrop-blur-md">
-                <Search className="w-8 h-8" />
+            </Link>
+            <Link href="/syariah" className="flex flex-col items-center gap-4 group cursor-pointer hover:-translate-y-2 transition-all duration-300">
+              <div className="w-16 h-16 rounded-2xl bg-white/10 flex items-center justify-center backdrop-blur-md group-hover:bg-white/20 transition-colors">
+                <Search className="w-8 h-8 group-hover:scale-110 transition-transform" />
               </div>
-              <h3 className="font-semibold text-xl">AI Anti-Gharar</h3>
+              <h3 className="font-semibold text-xl group-hover:text-white transition-colors">AI Anti-Gharar</h3>
               <p className="text-primary-foreground/70 text-sm">Deskripsi wajib jujur, AI mendeteksi kecurangan kondisi barang dari foto.</p>
-            </div>
-            <div className="flex flex-col items-center gap-4">
-              <div className="w-16 h-16 rounded-2xl bg-white/10 flex items-center justify-center backdrop-blur-md">
-                <HeartHandshake className="w-8 h-8" />
+            </Link>
+            <Link href="/syariah" className="flex flex-col items-center gap-4 group cursor-pointer hover:-translate-y-2 transition-all duration-300">
+              <div className="w-16 h-16 rounded-2xl bg-white/10 flex items-center justify-center backdrop-blur-md group-hover:bg-white/20 transition-colors">
+                <HeartHandshake className="w-8 h-8 group-hover:scale-110 transition-transform" />
               </div>
-              <h3 className="font-semibold text-xl">COD Terverifikasi</h3>
+              <h3 className="font-semibold text-xl group-hover:text-white transition-colors">COD Terverifikasi</h3>
               <p className="text-primary-foreground/70 text-sm">Otorisasi pertemuan langsung dengan sistem keamanan OTP satu kali pakai.</p>
-            </div>
+            </Link>
           </div>
         </div>
       </section>
