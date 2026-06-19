@@ -95,24 +95,24 @@ export default function Home() {
                 </Badge>
               </div>
               <div className="space-y-6 mt-8">
-                <div className="flex items-center gap-4 p-4 rounded-lg bg-muted/50 border">
-                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                <Link href="/syariah" className="flex items-center gap-4 p-4 rounded-lg bg-muted/50 border hover:bg-muted/80 transition-colors cursor-pointer group">
+                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
                     <ShieldCheck className="w-6 h-6" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-sm">Escrow Syariah</h4>
+                    <h4 className="font-semibold text-sm group-hover:text-primary transition-colors">Escrow Syariah</h4>
                     <p className="text-xs text-muted-foreground">Dana aman 100% hingga barang diterima.</p>
                   </div>
-                </div>
-                <div className="flex items-center gap-4 p-4 rounded-lg bg-muted/50 border">
-                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                </Link>
+                <Link href="/syariah" className="flex items-center gap-4 p-4 rounded-lg bg-muted/50 border hover:bg-muted/80 transition-colors cursor-pointer group">
+                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
                     <Search className="w-6 h-6" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-sm">AI Validator</h4>
+                    <h4 className="font-semibold text-sm group-hover:text-primary transition-colors">AI Validator</h4>
                     <p className="text-xs text-muted-foreground">Deskripsi transparan tanpa cacat tersembunyi.</p>
                   </div>
-                </div>
+                </Link>
               </div>
             </div>
           </motion.div>
