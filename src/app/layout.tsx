@@ -21,6 +21,8 @@ export const metadata: Metadata = {
 
 import { CartProvider } from "@/lib/context/CartContext";
 
+import { FloatingNav } from "@/components/layout/FloatingNav";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -31,13 +33,14 @@ export default function RootLayout({
       lang="id"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col font-sans bg-watermark">
+      <body className="min-h-full flex flex-col font-sans bg-watermark relative pb-16">
         <CartProvider>
           <Navbar />
           <main className="flex-1 flex flex-col">
             {children}
           </main>
           <Footer />
+          <FloatingNav />
         </CartProvider>
       </body>
     </html>
