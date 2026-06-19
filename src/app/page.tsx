@@ -53,11 +53,15 @@ export default function Home() {
               TrifShop adalah marketplace syariah pertama yang menggunakan AI untuk mendeteksi kecurangan, memastikan deskripsi jujur, dan melindungi dana Anda dengan sistem Escrow otomatis.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mt-4">
-              <Button size="lg" className="gap-2 h-12 text-base shadow-lg shadow-primary/20">
-                <ShoppingBag className="w-5 h-5" /> Mulai Belanja
+              <Button size="lg" className="gap-2 h-12 text-base shadow-lg shadow-primary/20" asChild>
+                <Link href="/kategori">
+                  <ShoppingBag className="w-5 h-5" /> Mulai Belanja
+                </Link>
               </Button>
-              <Button size="lg" variant="outline" className="gap-2 h-12 text-base">
-                <HeartHandshake className="w-5 h-5" /> Jual Barang
+              <Button size="lg" variant="outline" className="gap-2 h-12 text-base" asChild>
+                <Link href="/upload">
+                  <HeartHandshake className="w-5 h-5" /> Jual Barang
+                </Link>
               </Button>
             </div>
             
