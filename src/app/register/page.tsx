@@ -27,19 +27,27 @@ export default function RegisterPage() {
     setLoading(true);
     setError('');
 
-    // 1. Daftar ke Supabase Auth
-    const { data, error: signUpError } = await supabase.auth.signUp({
-      email: formData.email,
-      password: formData.password,
-      options: {
-        data: {
-          full_name: formData.name,
-        }
-      }
-    });
+    // Menggunakan API internal untuk mendaftarkan dan auto-verify user
+    try {
+      const response = await fetch('/api/auth/register', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          password: formData.password,
+        })
+      });
 
-    if (signUpError) {
-      setError(signUpError.message);
+      const data = await response.json();
+
+      if (!response.ok) {
+        setError(data.error || 'Terjadi kesalahan saat pendaftaran.');
+        setLoading(false);
+        return;
+      }
+    } catch (err: any) {
+      setError('Koneksi ke server gagal.');
       setLoading(false);
       return;
     }
