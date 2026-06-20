@@ -97,7 +97,7 @@ export function Navbar() {
               </>
             ) : (
               <>
-                <Button variant="ghost" asChild>
+                <Button variant="ghost" className="text-primary font-bold hover:bg-primary/10" asChild>
                   <Link href="/login">Masuk</Link>
                 </Button>
                 <Button asChild>

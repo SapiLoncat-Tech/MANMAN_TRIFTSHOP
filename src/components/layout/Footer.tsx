@@ -104,7 +104,7 @@ export function Footer() {
             <div className="w-12 h-12 bg-primary/10 text-primary rounded-full flex items-center justify-center mb-4">
               <Info className="w-6 h-6" />
             </div>
-            <h3 className="text-xl font-bold mb-2">{selectedInfo.title}</h3>
+            <h3 className="text-xl font-bold mb-2 text-primary">{selectedInfo.title}</h3>
             <p className="text-muted-foreground text-sm leading-relaxed mb-6">
               {selectedInfo.desc}
             </p>
